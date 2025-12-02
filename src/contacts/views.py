@@ -18,7 +18,7 @@ def contacts_detail_view(request, contact_id=None):
         user=user,
         type=Event.EventType.VIEWED,
         object_id=instance.id,
-        model_name="contacts.content",
+        content_object=instance,
     )
     return render(request, "contacts/detail.html", context)
 
